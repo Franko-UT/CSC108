@@ -33,3 +33,7 @@ def first_odd(items: list[int]) -> int:
     >>> first_odd([2, 4])
     0
     """
+    for item in items:
+        if item % 2 != 0:
+            return item
+    return 0
