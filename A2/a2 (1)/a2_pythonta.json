@@ -1,0 +1,14 @@
+{
+  "max-nested-blocks": "4",
+  "disable": [
+    "W0107",
+    "W0511",
+    "R1732"
+  ],
+  "allowed-import-modules": [
+    "math",
+    "python_ta",
+    "typing",
+    "doctest"
+  ]
+}
