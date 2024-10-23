@@ -9,14 +9,14 @@ CAPACITY_INDEX = 2
 NUM_BIKES_AVAILABLE_INDEX = 5
 NUM_DOCKS_AVAILABLE_INDEX = 6
 # Constants for station data
-ID = 0
-NAME = 1
-LATITUDE = 2
-LONGITUDE = 3
-CAPACITY = 4
-BIKES_AVAILABLE = 5
-DOCKS_AVAILABLE = 6
 
+ID =0
+NAME = 1
+CAPACITY =2
+BIKES_AVAILABLE = 3
+DOCKS_AVAILABLE = 4
+LATITUDE = 5
+LONGITUDE= 6
 
 NO_KIOSK = 'SMART'
 
@@ -79,13 +79,9 @@ def get_station_info(station_id: int, stations: list) -> list:
     list: [station name, number of bikes available, number of docks available, has_kiosk].
     """
     for station in stations:
-        if station[STATION_ID_INDEX] == station_id:
-            return [
-                station[NAME_INDEX],
-                station[NUM_BIKES_AVAILABLE_INDEX],  # Corrected: Number of bikes available
-                station[NUM_DOCKS_AVAILABLE_INDEX],  # Corrected: Number of docks available
-                has_kiosk(station)
-            ]
+        if station[ID] == station_id:
+            return [station[NAME],station[BIKES_AVAILABLE],station[DoCKS AVAILABLE],has_kiosk[station]]
+    return []
 
 
 # Function: get_column_sum
